@@ -10,7 +10,7 @@ import static Data.MainCollection.data;
 
 
 public class Info extends Command{
-    public String out = "";
+    private String out = "";
     public void run(String[] a){
 
         out +=  "" +

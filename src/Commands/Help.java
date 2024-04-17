@@ -26,7 +26,7 @@ public class Help extends Command{
         info.put("sort", "sort : отсортировать коллекцию в естественном порядке");
         info.put("print_label", "print_label : вывести значения поля label всех элементов в порядке возрастания");
         info.put("remove_by_label", "remove_by_label : удалить из коллекции все элементы, значение поля label которого эквивалентно заданному");
-        info.put("count_by_label", "count_greater_than_albums_count label : вывести количество элементов, значение поля label которых больше заданного");
+        info.put("count_by_label", "count_by_label label : вывести количество элементов, значение поля label которых больше заданного");
 
         keys = info.keySet();
         values = info.values();

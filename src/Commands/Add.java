@@ -1,23 +1,18 @@
 package Commands;
 
-import Data.MainCollection;
 import Data.MusicBand;
 import Objects.Print;
-import Objects.Writer;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Calendar;
 import java.util.Date;
 import static Data.MainCollection.data;
 import static Data.MainCollection.notUsedID;
-
 public class Add extends Command{
-    MusicBand val;
-    int id;
+    private MusicBand val;
+    private int id;
     public void run(String[] argument){
         try{
+
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Date date = new Date();
             if(notUsedID.size() > 0){
@@ -38,11 +33,12 @@ public class Add extends Command{
                     argument[6]
             );
             data.add(val);
-
-
             new Print().out("Sucsesfuly added");
         }catch (Exception e){
-            new Print().outErr("Field");
+            String out = "Illegal input.\n" +
+                    "Command should look like:\n" +
+                    "add [Name] [Cord: x] [Cord: y] [numberOfParticipants] [albumsCount] [Genre:( 'MATH_ROCK', 'PUNK_ROCK', 'BRIT_POP' )] [Label: sales]";
+            new Print().outErr(out);
         }
     }
 }

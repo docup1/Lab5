@@ -2,9 +2,7 @@ package Commands;
 
 import Data.Label;
 import Objects.Print;
-
 import static Data.MainCollection.data;
-
 public class countByLabel extends Command{
     Label lab = new Label();
     int n;

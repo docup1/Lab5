@@ -20,7 +20,10 @@ public class Update extends Command{
             data.get(pos).setLabel(arg[7]);
             new Print().out("Sucsesfuly updated");
         }catch (Exception e){
-            new Print().outErr("Field");
+            String out = "Illegal input.\n" +
+                    "Command should look like:\n" +
+                    "update [id] [Name] [Cord: x] [Cord: y] [numberOfParticipants] [albumsCount] [Genre:( 'MATH_ROCK', 'PUNK_ROCK', 'BRIT_POP' )] [Label: sales]";
+            new Print().outErr(out);
         }
     }
 }
