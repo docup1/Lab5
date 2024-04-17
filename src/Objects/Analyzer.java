@@ -1,35 +1,21 @@
 package Objects;
 
 public class Analyzer {
-
-    String task;
-    String position;
-    char tag;
-    int val = 0;
-
+    private String task;
+    private String arguments [];
+    private String[] words;
     public Analyzer(String comand){
-        try {
-            String[] words = comand.split(" ");
-            if(words.length == 1){
-                this.Seter(comand);
-            }
-            else {
-                this.Seter(words[0], Integer.parseInt(words[1]));
+        this.words = comand.split(" ");
+        arguments = new String[this.words.length - 1];
+        this.task = this.words[0];
+        if(this.words.length > 1){
+            for(int i = 1; i < this.words.length; i++){
+                arguments [i - 1] = words[i];
             }
         }
-        catch(Exception e){
-            new Print().printErr();
-        }
     }
-    private void Seter(String task, int val){
-        this.task = task;
-        this.val = val;
-    }
-    private void Seter(String task){
-        this.task = task;
-    }
-    public int getVal(){
-        return this.val;
+    public String[] getArgument(){
+        return arguments;
     }
     public String getTask(){
         return this.task;

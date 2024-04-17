@@ -1,0 +1,17 @@
+<MusicBand>
+	<ELEMENT>
+		<id>1</id>
+		<name>qw</name>
+		<coordinates>
+			<X>12</X>
+			<Y>12</Y>
+		</coordinates>
+		<creationDate>2024/04/16 22:57:12</creationDate>
+		<numberOfParticipants>12</numberOfParticipants>
+		<albumsCount>21</albumsCount>
+		<genre>PUNK_ROCK</genre>
+		<label>
+			<sales>12</sales>
+		</label>
+	</ELEMENT>
+</MusicBand>
